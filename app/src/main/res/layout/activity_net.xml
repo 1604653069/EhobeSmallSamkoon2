@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_rec">
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用下方的IP地址"
+        android:textColor="#04a8ff"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title1"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/iptitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IP地址"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ip"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iptitle"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:background="@drawable/shape_grayrec" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/porttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="端口号"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/port"
+            android:padding="5dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_grayrec" />
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

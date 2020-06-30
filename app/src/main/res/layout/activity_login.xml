@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="22dp"
+        android:src="@mipmap/logologin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_below="@id/logo"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.flyco.tablayout.SlidingTabLayout
+            android:layout_gravity="center"
+            android:id="@+id/tl"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            tl:tl_indicator_color="#04a8ff"
+            tl:tl_textAllCaps="true"
+            tl:tl_textBold="BOTH"
+            tl:tl_textsize="50sp"
+            tl:tl_textSelectColor="#04a8ff"
+            tl:tl_textUnselectColor="#999999"
+            />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+</RelativeLayout>

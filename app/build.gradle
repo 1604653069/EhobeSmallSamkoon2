@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+def config = rootProject.ext.ver
+def library = rootProject.ext.library
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getDefault())
+}
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.su.ehobesmallsamkoon"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+//        ndk {
+//            // 加了其他的文件夹（比如 armeabi-v7a，x86等）可能会出问题
+//            abiFilters "armeabi"
+//        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+
+    dependencies {
+        implementation fileTree(include: ['*.jar'], dir: 'libs')
+        testImplementation 'junit:junit:4.12'
+        androidTestImplementation 'com.android.support.test:runner:1.0.1'
+        androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+        //Android支持库
+        api library.supportV4
+        api library.supportV7
+        api library.design
+        api library.cardview
+        api library.constraint
+        api library.recyclerview
+        //RxJava2+Retrofit2 网络框架
+        api library.okio
+        api library.okhttp
+        api library.okhttp_logging
+        api library.retrofit2
+        api library.gson
+        api library.retrofit2_gson
+        api library.retrofit2_adapter
+        api library.rxjava2
+        api library.rxlifecycle2_components
+        //屏幕适配
+        api library.autosize
+        //常用工具库
+        api library.circleimageview
+        api library.roundedimageview
+        api library.BaseRecyclerViewAdapterHelper
+        api library.SmartRefreshLayout
+        api library.rxpermissions2
+        api library.logger
+        api library.BaseToolbar
+        api library.StatusBarUtil
+        api library.glide
+        //Butterknife
+        api library.butterknife
+        api library.butterknife_compiler
+        api library.TabLayout
+        //内存泄漏检测
+        debugApi 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+        releaseApi 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+        implementation 'com.daimajia.easing:library:2.0@aar'
+        implementation 'com.daimajia.androidanimations:library:2.2@aar'
+    }
+}
+
+dependencies {
+    implementation 'org.jetbrains:annotations:15.0'
+}

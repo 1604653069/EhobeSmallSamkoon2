@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rec"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户：唐马儒"
+            android:textColor="#333333"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/userId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ID：125"
+            android:textColor="#333333"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_rec_gray">
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/cancel"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/shape_rou_blue"/>
+            <TextView
+                android:layout_toRightOf="@id/cancel"
+                android:id="@+id/delete"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/shape_rou_red"/>
+        </RelativeLayout>
+    </FrameLayout>
+</FrameLayout>

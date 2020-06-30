@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 0x2109 / 0x7600: XGZX FINGERVEIN -->
+    <usb-device vendor-id="8457" product-id="30208" />
+
+    <!-- 0x200d / 0x7600: XGZX FINGERVEIN -->
+    <usb-device vendor-id="8205" product-id="30208" />
+    <usb-device vendor-id="8457" product-id="30264" />
+</resources>
