@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_week"
+        android:orderInCategory="100"
+        android:title="本周"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_month"
+        android:orderInCategory="100"
+        android:title="本月"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_quarter"
+        android:orderInCategory="100"
+        android:title="本季度"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_custom"
+        android:orderInCategory="100"
+        android:title="自定义"
+        app:showAsAction="never" />
+</menu>

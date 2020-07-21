@@ -8,7 +8,6 @@ import com.su.ehobesmallsamkoon.bean.respond.Dept;
 import com.su.ehobesmallsamkoon.bean.respond.LoginResults;
 import com.su.ehobesmallsamkoon.bean.respond.TerminalInfo;
 
-
 import java.util.ArrayList;
 
 import io.reactivex.Observable;

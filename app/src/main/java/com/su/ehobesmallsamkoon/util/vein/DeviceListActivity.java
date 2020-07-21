@@ -55,7 +55,6 @@ public class DeviceListActivity extends Activity {
 		discoveryFilter.addAction(BluetoothDevice.ACTION_FOUND);
 		discoveryFilter.addAction(ACTION_NOT_FOUND_DEVICE);
 		this.registerReceiver(discoveryReceiver, discoveryFilter);
-
 		mBtAdapter = BluetoothAdapter.getDefaultAdapter();
 		doDiscovery();
 	}

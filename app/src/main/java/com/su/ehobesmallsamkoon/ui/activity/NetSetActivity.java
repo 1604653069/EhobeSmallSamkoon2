@@ -14,7 +14,8 @@ import com.su.ehobesmallsamkoon.base.ToolbarActivity;
 public class NetSetActivity extends ToolbarActivity {
 
     public static void start(Context context){
-        context.startActivity(new Intent(context,NetSetActivity.class));
+       // context.startActivity(new Intent(context,NetSetActivity.class));
+        context.startActivity(new Intent(context,NetWorkSettingActivity.class));
     }
 
     @Nullable

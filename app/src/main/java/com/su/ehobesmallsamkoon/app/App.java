@@ -34,7 +34,6 @@ public class App extends BaseApplication {
     }
 
     private void connectDev(){
-        Log.e(TAG, "onClick: 连接设备");
         long ret = 0;
         if (DevHandle > 0) {
             Log.e(TAG, "设备已处于连接状态");
@@ -47,6 +46,7 @@ public class App extends BaseApplication {
             if (!mUsbManager.hasPermission(mUsbDev)) {
                 Log.e(TAG, "设备没有权限");
             } else {
+                Log.i("TAG","权限已获取");
                 ret = VeinApi.initUsbCommunication(mUsbDev, mUsbManager);
 //                        VeinApi.PrintfDebug("initUsbCommunication:" + ret);
             }
@@ -57,6 +57,7 @@ public class App extends BaseApplication {
             ret = VeinApi.FVConnectDev(sDev, "00000000"); //默认连接密码是8个字符0
         }
         if (ret > 0) {
+            Log.e(TAG, "onClick: 连接设备");
             DevHandle = ret;
             //获取设备名称及相关设置参数
             String sParam = VeinApi.GetDevParam(DevHandle);

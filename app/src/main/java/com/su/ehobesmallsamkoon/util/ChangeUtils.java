@@ -98,4 +98,16 @@ public class ChangeUtils {
 
         return mSum;
     }
+
+    public static String integerToHex(int id, int length) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(Integer.toHexString(id));
+        int length1 = sb.length();
+        if (length - length1 > 0) {
+            for (int i = 0; i < length - length1; i++) {
+                sb.insert(0, "0");
+            }
+        }
+        return sb.toString().toUpperCase();
+    }
 }

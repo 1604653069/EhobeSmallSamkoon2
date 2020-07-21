@@ -17,7 +17,7 @@ public class UsersAdapter extends BaseRVAdapter<UserBean> {
     @Override
     public void onBindVH(BaseRVHolder holder, UserBean data, int position) {
         holder.setText(R.id.userName,"用户："+data.getUserName())
-        .setText(R.id.userId,"ID："+data.getUserName())
+        .setText(R.id.userId,"ID："+data.getId())
         .addOnClickListener(R.id.cancel)
         .addOnClickListener(R.id.delete);
     }

@@ -59,15 +59,15 @@
                 android:inputType="textPassword"/>
         </LinearLayout>
 
-        <Button
+        <com.su.ehobesmallsamkoon.ui.widget.LoginButton
             android:id="@+id/login"
             android:layout_marginTop="45dp"
             android:text="登  录"
             android:textColor="#ffffff"
             android:textSize="20sp"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_blue_button"/>
+            android:layout_height="50dp"
+           />
     </LinearLayout>
 
 </RelativeLayout>

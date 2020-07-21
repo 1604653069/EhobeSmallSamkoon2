@@ -114,4 +114,22 @@ public class FingerFragment extends BaseFragment<FingerPresenter> {
 //            }
         }
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.i("TAG","onResume()方法被执行了");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.i("TAG","onStop()方法被执行了");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.i("TAG","onDestroy()方法被执行了");
+    }
 }

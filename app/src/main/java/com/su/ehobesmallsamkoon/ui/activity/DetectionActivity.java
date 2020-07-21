@@ -8,6 +8,7 @@ import com.su.ehobesmallsamkoon.base.BaseActivity;
 import com.su.ehobesmallsamkoon.bean.respond.TerminalInfo;
 import com.su.ehobesmallsamkoon.network.RxCallback;
 import com.su.ehobesmallsamkoon.presenter.DetectionPresenter;
+import com.su.ehobesmallsamkoon.serial_port.SerialPortUart;
 
 import java.util.ArrayList;
 
@@ -32,6 +33,8 @@ public class DetectionActivity extends BaseActivity<DetectionPresenter> {
                 }
             }
         });
+        //打开串口
+        SerialPortUart.getInstance().openSerialPort("/dev/ttyS1", 115200);
     }
 
     @Override

@@ -31,6 +31,14 @@ public class Login {
         this.pwd = pwd;
         this.termnum = termnum;
         this.venadigitalis = venadigitalis;
+
+    }
+
+    public Login(String termId, String userName, String password, int i) {
+        this.termnum = termId;
+        this.account =userName;
+        this.pwd =password;
+        this.logintype = i;
     }
 
     public String getAccount() {

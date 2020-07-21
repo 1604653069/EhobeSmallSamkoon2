@@ -45,4 +45,14 @@ public class LoginResults {
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
+
+    @Override
+    public String toString() {
+        return "LoginResults{" +
+                "ID=" + ID +
+                ", DeptNum='" + DeptNum + '\'' +
+                ", UserType=" + UserType +
+                ", UserName='" + UserName + '\'' +
+                '}';
+    }
 }

@@ -19,8 +19,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-
-import com.google.common.base.Verify;
+import com.su.ehobesmallsamkoon.ui.fragment.InputFragment;
+import com.su.ehobesmallsamkoon.util.ToastUtil;
 import com.xgzx.veinmanager.VeinApi;
 
 import java.io.IOException;
@@ -39,7 +39,7 @@ import butterknife.OnClick;
                   step3:安卓端获取新的特征值保存到本地
         特征值验证：step1:：用户登录（特征采集）
                   step2:1:N验证(从本地读取特征值)*/
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements InputFragment.LoginListener {
     private static final String TAG = "MainActivity";
     @BindView(R.id.connection)
     Button connection;
@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
     Button register;
     @BindView(R.id.verification)
     Button verification;
-
     public static int iThreadRun = 0;
     public static long DevHandle = 0; //设备操作句柄
     boolean mUsbPerMission = false; //USB设备权限
@@ -178,6 +177,13 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
         }
+    }
+
+
+
+    @Override
+    public void onSuccess(String username) {
+        ToastUtil.show("123",500);
     }
 
     //采集模板线程

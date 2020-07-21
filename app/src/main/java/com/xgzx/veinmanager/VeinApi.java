@@ -1,6 +1,5 @@
 package com.xgzx.veinmanager;
 
-import java.io.UnsupportedEncodingException;
 import android.hardware.usb.UsbConstants;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbDeviceConnection;
@@ -10,8 +9,11 @@ import android.hardware.usb.UsbManager;
 
 import com.su.ehobesmallsamkoon.util.vein.BTSocket;
 
+import java.io.UnsupportedEncodingException;
+
 public class VeinApi {
 	static {
+		//System.loadLibrary("VeinApi");
 		System.loadLibrary("VeinApi");
 	}
 
