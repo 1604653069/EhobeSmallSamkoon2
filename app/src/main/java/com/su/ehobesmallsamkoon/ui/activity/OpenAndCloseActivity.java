@@ -46,8 +46,7 @@ public class OpenAndCloseActivity extends BaseActivity<OpenAndClosePresenter> {
     protected void initialize() {
         EventBus.getDefault().register(this);
         //发送开门指令
-        String address="010203040507";
-        SerialPortUart.getInstance().sendSerialPort(InstructionsUtils.getInstruction(InstructionsUtils.OPEN_DOOR, address), true);
+        SerialPortUart.getInstance().sendSerialPort(InstructionsUtils.getInstruction(InstructionsUtils.OPEN_DOOR, "010203040507"), true);
     }
 
     @Override
